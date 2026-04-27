@@ -1,0 +1,67 @@
+<!-- <h2>Add Product</h2>
+<input [ngModel] = "product.title" placeholder="Title">
+<input [ngModel] = "product.price" placeholder="Price">
+<button (click) = "add()">Add</button>
+
+
+
+<h2>Products</h2>
+
+<div *ngFor = "let p of products">
+
+    <h3>{{p.title}}</h3>
+    <p>{{p.price}}</p>
+    <button (click) = "edit(p)">Edit</button>
+
+    <button (click) = "delete(p.id)">Delete</button>
+</div>
+<hr>
+
+<div *ngIf = "selected">
+    <h3>Edit Products</h3>
+    <input [(ngModel)] = "selected.title">
+    <input [(ngModel)] = "selected.price">
+    <button (click) = "update()">Update</button>
+
+</div>
+ -->
+
+ <!-- <h2>Add Product</h2>
+
+<input [(ngModel)]="product.title" placeholder="Title">
+<input [(ngModel)]="product.price" type="number" placeholder="Price">
+
+<button (click)="add()">Add</button>
+
+<hr>
+
+<h2>Products</h2>
+
+<div *ngFor="let p of products">
+  <h3>{{ p.title }}</h3>
+  <p>{{ p.price }}</p>
+
+  <button (click)="edit(p)">Edit</button>
+  <button (click)="delete(p.id)">Delete</button>
+</div>
+
+<hr>
+
+<div *ngIf="selected">
+  <h3>Edit Product</h3>
+
+  <input [(ngModel)]="selected.title">
+  <input [(ngModel)]="selected.price">
+
+  <button (click)="update()">Update</button>
+</div> -->
+
+<tbody>
+  <tr *ngFor = "let prod of dataDemo">
+    <td>{{prod.id}}</td>
+    <td>{{prod.name}}</td>
+    <td>{{prod.email}}</td>
+  </tr>
+</tbody>
+
+

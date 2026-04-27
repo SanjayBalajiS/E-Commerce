@@ -1,0 +1,44 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 5%;
+  background: linear-gradient(to right, #ffffff, #f3f3f3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .text {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color:  rgb(0, 206, 0);
+}
+
+.hero p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero button {
+  background:  rgb(0, 206, 0);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hero button:hover{
+  background-color: green;
+}
+
+.hero img {
+  width: 300px;
+  object-fit: cover;
+}

@@ -1,0 +1,33 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 5%;
+  flex-wrap: wrap;
+}
+
+.categories .card {
+  width: 140px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.categories .card:hover {
+  transform: translateY(-5px);
+}
+
+.categories img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.categories p {
+  margin-top: 10px;
+  font-weight: 500;
+}
