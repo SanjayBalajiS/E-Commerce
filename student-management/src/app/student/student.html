@@ -1,0 +1,39 @@
+<h2>Student Management</h2>
+
+<!-- FORM -->
+<input type="text" placeholder="Name" [(ngModel)]="newStudent.name">
+<input type="number" placeholder="Age" [(ngModel)]="newStudent.age">
+<input type="text" placeholder="Department" [(ngModel)]="newStudent.department">
+
+<button (click)="save()">
+  {{ isEdit ? 'Update' : 'Add' }}
+</button>
+
+<hr>
+
+<!-- TABLE -->
+<table border="1">
+  <thead>
+    <tr>
+      <th (dblclick)="sort('name')">Name</th>
+      <th (dblclick)="sort('age')">Age</th>
+      <th (dblclick)="sort('department')">Department</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let s of students$ | async; let isOdd = odd"
+        [ngClass]="isOdd ? 'odd-row' : 'even-row'">
+
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.department }}</td>
+
+      <td>
+        <button (click)="edit(s)">Edit</button>
+        <button (click)="delete(s.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
