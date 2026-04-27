@@ -1,0 +1,37 @@
+<h2>All Products</h2>
+
+<div class="product-grid">
+  <div class="card" *ngFor="let product of products">
+
+    <img [src]="product.thumbnail">
+
+    <h3>{{ product.title }}</h3>
+
+    <p>₹ {{ product.price }}</p>
+
+    <button>Add to Cart</button>
+
+  </div>
+</div>
+
+<!-- <h2>All Products</h2>
+
+<div *ngIf="products.length === 0">
+  <p>Loading products...</p>
+</div>
+
+<div class="product-grid" *ngIf="products.length > 0">
+
+  <div class="card" *ngFor="let product of products">
+
+    <img [src]="product.thumbnail">
+
+    <h3>{{ product.title }}</h3>
+
+    <p class="price">₹ {{ product.price }}</p>
+
+    <button>Add to Cart</button>
+
+  </div>
+
+</div> -->

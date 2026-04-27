@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <h2 class="logo">FlashStore</h2>
+
+    <ul>
+        <li routerLink = "home">Home</li>
+        <li>Categories</li>
+        <li>Deals</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <div class="actions">
+
+    <input type="text" placeholder="Search products...">
+
+    
+    <ng-container *ngIf="!user">
+      <button routerLink="/login" class="login">Login</button>    
+      <button routerLink="/signup" class="signup">Sign Up</button>
+    </ng-container>
+
+    <ng-container *ngIf="user">
+      <span class="username">{{ user.name.toUpperCase() }}</span>
+      <button (click)="logout()" class="logout">Logout</button>
+    </ng-container>
+
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+button {
+  background: orange;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
