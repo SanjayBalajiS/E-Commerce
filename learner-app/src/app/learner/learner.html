@@ -1,0 +1,39 @@
+<h2>Student Management</h2>
+
+<input [(ngModel)]="form.name" placeholder="Name">
+<input [(ngModel)]="form.age" type="number" placeholder="Age">
+<input [(ngModel)]="form.course" placeholder="Course">
+<input type="text" placeholder="Search by name..." [(ngModel)]="searchText">
+
+<button (click)="save()">
+  {{ isEdit ? 'Update' : 'Add' }}
+</button>
+
+<hr>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th (dblclick)="sort('name')">Name</th>
+      <th (dblclick)="sort('age')">Age</th>
+      <th (dblclick)="sort('course')">Course</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let l of learners$ | async; let isOdd = odd"
+        [ngClass]="isOdd ? 'odd' : 'even'"
+        [hidden]="searchText && !l.name.toLowerCase().includes(searchText.toLowerCase())">
+
+      <td>{{ l.name }}</td>
+      <td>{{ l.age }}</td>
+      <td>{{ l.course }}</td>
+
+      <td>
+        <button (click)="edit(l)">Edit</button>
+        <button (click)="delete(l.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
